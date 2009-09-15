@@ -1,0 +1,5 @@
+Description:
+    This generator creates a migration for entries in the CheapToad database.
+
+Example:
+    ./script/generate cheaptoad_generator

@@ -1,32 +1,49 @@
 = cheaptoad
 
-* http://github.com/#{github_username}/#{project_name}
+* http://cheaptoad.rubyforge.org
 
 == DESCRIPTION:
 
-FIX (describe your package)
+CheapToad is a simple server plugin for the HopToad notifier.  Make your
+app a HopToad server in just a couple of lines!
 
 == FEATURES/PROBLEMS:
 
-* FIX (list of features or problems)
+* Very simple installation
+* Very simple configuration
+* Keeps your exceptions around to browse later
 
 == SYNOPSIS:
 
-  FIX (code sample of usage)
+Make a Rails app, or choose an existing one.  In config/environment.rb,
+add the line "config.cheaptoad".
+
+Then, create a file called config/initializers/hoptoad.rb:
+
+HoptoadNotifier.configure do |config|
+  config.api_key = 'My Project Name'
+  config.host = 'myapp.host.com'
+  config.port = 3000
+
+  config.environment_filters << "MY_SECRET_KEY"
+
+end
 
 == REQUIREMENTS:
 
-* FIX (list of requirements)
+You'll need a Rails app, which will be your CheapToad server.  It can do
+whatever else you like, but its notices controller (by default
+"/notices") will be used for CheapToad stuff.
 
 == INSTALL:
 
-* FIX (sudo gem install, anything else)
+sudo gem install cheaptoad
 
 == LICENSE:
 
 (The MIT License)
 
-Copyright (c) 2009 FIXME full name
+Copyright (c) 2009 Noah Gibbs
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
