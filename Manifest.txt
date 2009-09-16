@@ -4,6 +4,7 @@ Manifest.txt
 PostInstall.txt
 README.rdoc
 Rakefile
+app/models/notice.rb
 app/controllers/notices_controller.rb
 generators/cheaptoad_migration/USAGE
 generators/cheaptoad_migration/cheaptoad_migration_generator.rb
