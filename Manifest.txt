@@ -4,8 +4,13 @@ Manifest.txt
 PostInstall.txt
 README.rdoc
 Rakefile
-app/models/notice.rb
 app/controllers/notices_controller.rb
+app/models/notice.rb
+app/views/notices/index.atom.builder
+app/views/notices/index.html.erb
+app/views/notices/list_by_api_key.html.erb
+app/views/notices/list_notices.html.erb
+app/views/notices/show.html.erb
 generators/cheaptoad_migration/USAGE
 generators/cheaptoad_migration/cheaptoad_migration_generator.rb
 generators/cheaptoad_migration/templates/20090914074933_ct_migrate.rb

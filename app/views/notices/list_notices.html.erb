@@ -1,0 +1,7 @@
+<h1> CheapToad Notices (errors) for Project <%= @api_key -%> </h1>
+
+<ul>
+  <% @notices.each do |n| %>
+    <li> <%= link_to(n.error_message, :action => 'show', :id => n.id) %> </li>
+  <% end %>
+</ul>

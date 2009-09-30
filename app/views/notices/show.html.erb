@@ -1,0 +1,19 @@
+<h1> Notice: <%= @notice.error_message %> </h1>
+<h3> Project (API_key): <%= n.api_key %> </h3>
+
+<hr />
+
+<p> <b>Request string</b>:
+   <span style="color: #D0D0FF"><%= n.request %></span> </p>
+
+<h2> Backtrace </h2>
+
+<p> <%= n.backtrace %> </p>
+
+<h2> Session Info </h2>
+
+<p> <%= n.session %> </p>
+
+<h2> Environment Variables </h2>
+
+<p> <%= n.environment %> </p>
