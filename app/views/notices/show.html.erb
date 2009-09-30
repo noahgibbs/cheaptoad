@@ -3,18 +3,18 @@
 
 <hr />
 
-<p> <b>Request string</b>:
-   <span style="color: #D0D0FF"><%= simple_format @notice.request %></span>
-</p>
+<h2> Request </h2>
+
+<p> <%= simple_format @notice.request.to_yaml %> </p>
 
 <h2> Backtrace </h2>
 
-<p> <%= simple_format @notice.backtrace %> </p>
+<p> <%= simple_format @notice.backtrace.to_yaml %> </p>
 
 <h2> Session Info </h2>
 
-<p> <%= simple_format @notice.session %> </p>
+<p> <%= simple_format @notice.session.to_yaml %> </p>
 
 <h2> Environment Variables </h2>
 
-<p> <%= simple_format @notice.environment %> </p>
+<p> <%= simple_format @notice.environment.to_yaml %> </p>
