@@ -5,16 +5,16 @@
 
 <h2> Request </h2>
 
-<p> <%= simple_format @notice.request.to_yaml %> </p>
+<%= simple_format @notice.request.to_yaml %>
 
 <h2> Backtrace </h2>
 
-<p> <%= simple_format @notice.backtrace.to_yaml %> </p>
+<%= simple_format @notice.backtrace.to_yaml %>
 
 <h2> Session Info </h2>
 
-<p> <%= simple_format @notice.session.to_yaml %> </p>
+<%= simple_format @notice.session.to_yaml %>
 
 <h2> Environment Variables </h2>
 
-<p> <%= simple_format @notice.environment.to_yaml %> </p>
+<%= simple_format @notice.environment.to_yaml %>
