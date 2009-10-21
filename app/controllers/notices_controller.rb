@@ -16,6 +16,7 @@ class NoticesController < ApplicationController
   def list_notices
     @api_key = params[:api_key]
     @notices = Notice.find_all_by_api_key(@api_key)
+    render :layout => "with_feed"
   end
 
   def show

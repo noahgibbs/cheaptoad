@@ -6,9 +6,9 @@ README.rdoc
 Rakefile
 app/controllers/notices_controller.rb
 app/models/notice.rb
-app/views/notices/index.atom.builder
+app/views/layouts/with_feed.html.erb
 app/views/notices/index.html.erb
-app/views/notices/list_by_api_key.html.erb
+app/views/notices/list_notices.atom.builder
 app/views/notices/list_notices.html.erb
 app/views/notices/show.html.erb
 generators/cheaptoad_migration/USAGE
