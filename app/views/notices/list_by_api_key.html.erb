@@ -1,7 +1,0 @@
-<h1> CheapToad Projects (API Keys) </h1>
-
-<ul>
-  <% @keys.each do |k| %>
-    <li> <%= link_to(k, :action => 'list_notices', :api_key => k) -%> </li>
-  <% end %>
-</ul>
