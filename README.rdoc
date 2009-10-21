@@ -44,6 +44,10 @@ You'll need a Rails app, which will be your CheapToad server.  It can do
 whatever else you like, but its notices controller (by default
 "/notices") will be used for CheapToad stuff.
 
+You will *not* need a HopToad API key.  That's kind of the point of this
+project.  Instead of using a big hexadecimal string as your API key, I
+recommend you use a simple string like "My Blog" or "Secret Project X".
+
 == RESKINNING:
 
 By default, CheapToad has a built-in set of HTML and RSS files to give
