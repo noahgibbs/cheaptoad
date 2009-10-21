@@ -8,7 +8,7 @@ atom_feed do |feed|
       entry.content(<<END ,
 <b>Project/APIkey:</b> #{notice.api_key} <br/>
 
-<b>Error location:</b> #{notice.backtrace[0]}
+<b>Error location:</b> #{notice.backtrace[0]} <br/>
 
 <b>Request:</b> #{simple_format notice.request.to_yaml}
 END

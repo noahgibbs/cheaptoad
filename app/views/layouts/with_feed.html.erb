@@ -1,6 +1,5 @@
 <head>
-  <%= auto_discovery_link_tag :atom, "/notices/list_notices.atom?api_key=#{@api_key}" %>
-</head>
+  <%= auto_discovery_link_tag :atom, notices_url(:format => :atom, :api_key => @api_key) %>
 <body>
   <%= yield %>
 </body>
