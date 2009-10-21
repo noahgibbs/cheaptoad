@@ -5,14 +5,14 @@ atom_feed do |feed|
   @notices.each do |notice|
     feed.entry(notice) do |entry|
       entry.title(notice.error_message)
-      entry.content(<<END
+      entry.content(<<END ,
 <b>Project/APIkey:</b> #{notice.api_key} <br/>
 
 <b>Error location:</b> #{notice.backtrace[0]}
 
 <b>Request:</b> #{simple_format notice.request.to_yaml}
 END
-                    , :type => 'html')
+                    :type => 'html')
     end
   end
 end

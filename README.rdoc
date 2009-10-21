@@ -16,24 +16,42 @@ app a HopToad server in just a couple of lines!
 == SYNOPSIS:
 
 Make a Rails app, or choose an existing one.  In config/environment.rb,
-add the line "config.cheaptoad".
+add the line 'config.gem "cheaptoad"'.  Now, that app can receive
+HopToad errors!  If you want it to give you an RSS feed of errors (who
+wouldn't?), you'll also need to go into config/routes.rb and add the
+line "resources :notices".
 
-Then, create a file called config/initializers/hoptoad.rb:
+In any and all apps that you want to send errors to your app, create a
+file called config/initializers/hoptoad.rb, as you always would when
+using HopToad.  Install the HopToad notifier also, of course.  The config
+file will look a bit like this:
 
 HoptoadNotifier.configure do |config|
   config.api_key = 'My Project Name'
-  config.host = 'myapp.host.com'
+  config.host = 'mycheaptoadapp.host.com'
   config.port = 3000
 
   config.environment_filters << "MY_SECRET_KEY"
 
 end
 
+Note that the host and port are for the app that will *receive* HopToad
+errors, the app you added the 'config.gem "cheaptoad"' to.
+
 == REQUIREMENTS:
 
 You'll need a Rails app, which will be your CheapToad server.  It can do
 whatever else you like, but its notices controller (by default
 "/notices") will be used for CheapToad stuff.
+
+== RESKINNING:
+
+By default, CheapToad has a built-in set of HTML and RSS files to give
+a very simple list of your errors.  If you'd rather use your own, it's
+probably easiest to just build your own notices_controller.rb file and
+appropriate view files to go with it.  You can look at the ones in
+your local copy of the CheapToad gem to do it -- they're really quite
+simple.  Then, add your own new HTML, CSS and whatnot to pretty it up.
 
 == INSTALL:
 
