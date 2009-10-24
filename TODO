@@ -1,2 +1,9 @@
 Add "legal projects list" to make it annoying for attackers to send unlimited
 false notices
+
+Add CSS to views for easy stylesheetification, and way to supply a CSS file
+from app.
+
+Make use of backtrace digest to combine identical error notices.
+
+Add count of errors to each notice.
