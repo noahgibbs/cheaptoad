@@ -4,6 +4,7 @@ Manifest.txt
 PostInstall.txt
 README.rdoc
 Rakefile
+TODO
 app/controllers/notices_controller.rb
 app/models/notice.rb
 app/views/layouts/with_feed.html.erb

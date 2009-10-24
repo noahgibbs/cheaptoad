@@ -1,11 +1,13 @@
 class NoticesController < ApplicationController
-  def index
-    if request.put? or request.post?
-      notice = Notice.create_from_yaml(request.raw_post)
-      notice.save!
+  def create
+    notice = Notice.create_from_yaml(request.raw_post)
+    notice.save!
 
-      render :text => "Successfully received error from hoptoad_notifier!"
-    elsif params[:api_key]
+    render :text => "Successfully received error from hoptoad_notifier!"
+  end
+
+  def index
+    if params[:api_key]
       @api_key = params[:api_key]
       @notices = Notice.find_all_by_api_key(@api_key)
       render :layout => "with_feed", :action => "list_notices"
