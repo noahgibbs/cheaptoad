@@ -6,7 +6,12 @@ class Notice < ActiveRecord::Base
     full_yaml = full_yaml['notice'] if full_yaml['notice']
 
     notice = Notice.create(full_yaml)
-    notice.backtrace_digest = Digest::SHA1.hexdigest(notice.backtrace)
+    if(notice.backtrace.kind_of? String)
+      backtraces = notice.backtrace
+    else
+      backtraces = notice.backtrace.join('\n')
+    end
+    notice.backtrace_digest = Digest::SHA1.hexdigest(backtraces)
 
     notice
   end
