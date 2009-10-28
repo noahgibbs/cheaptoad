@@ -15,10 +15,12 @@ class CtMigrate < ActiveRecord::Migration
     end
 
     add_index("notices", "backtrace_digest")
+    add_index("notices", "updated_at")
   end
 
   def self.down
     remove_index("notices", "backtrace_digest")
+    remove_index("notices", "updated_at")
     drop_table "notices"
   end
 end

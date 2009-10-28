@@ -1,6 +1,6 @@
 class NoticesController < ApplicationController
   def create
-    notice = Notice.create_from_yaml(request.raw_post)
+    notice = Notice.notice_from_yaml(request.raw_post)
     notice.save!
 
     render :text => "Successfully received error from hoptoad_notifier!"
@@ -9,7 +9,8 @@ class NoticesController < ApplicationController
   def index
     if params[:api_key]
       @api_key = params[:api_key]
-      @notices = Notice.find_all_by_api_key(@api_key)
+      @notices = Notice.find_all_by_api_key(@api_key,
+                                            :order => "updated_at DESC")
       render :layout => "with_feed", :action => "list_notices"
     else
       # List API keys

@@ -1,7 +1,11 @@
 <h1> Notice: <%= @notice.error_message %> </h1>
 <h3> Project (API_key): <%= @notice.api_key %> </h3>
 
-<p> Created: #{@notice.created_at} / Updated: #{@notice.updated_at} </p>
+<p>
+  first instance of this error: <%= @notice.created_at %> <br />
+  most recent instance of this error: <%= @notice.updated_at %> <br />
+  number of occurrences: <b><%= @notice.count %></b>
+</p>
 
 <hr />
 

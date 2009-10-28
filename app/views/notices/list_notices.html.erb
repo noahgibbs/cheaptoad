@@ -2,8 +2,14 @@
 
 <h2> Your errors: </h2>
 
-<ul>
+<table>
+  <th> <td> Error message </td> <td> Count </td>
+  </th>
+
   <% (@notices || []).each do |n| %>
-    <li> <%= link_to(n.error_message, :action => 'show', :id => n.id) %> </li>
+    <tr>
+      <td><%= link_to(n.error_message, :action => 'show', :id => n.id) %></td>
+      <td><%= n.count %></td>
+    </tr>
   <% end %>
 </ul>
