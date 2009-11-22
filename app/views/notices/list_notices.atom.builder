@@ -1,6 +1,6 @@
 atom_feed(:root_url => request.url) do |feed|
   feed.title(@feedtitle || "Error Feed for #{@api_key} from CheapToad")
-  feed.updated(@notices.first.created_at)
+  feed.updated(@notices.first.updated_at)
 
   @notices.each do |notice|
     feed.entry(notice) do |entry|
