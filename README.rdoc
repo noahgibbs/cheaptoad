@@ -20,6 +20,20 @@ two lines in config/initializers/hoptoad.rb and switch to Hoptoad.
 If Hoptoad's motto is "Ride the Toad", ours would be "Too cheap to ride
 the toad?  Take the CheapToad Bus!"
 
+By the way, I am in no way affiliated with thoughtbot.  This is all
+reverse engineered from the Hoptoad notifier and somebody's RedMine
+plugin for Hoptoad.  Thoughtbot is aware of CheapToad's existence, but
+I'm not an employee or anything.
+
+Also, if you like CheapToad for your experimental projects, consider
+upgrading your more professional-looking projects to Hoptoad, or
+getting your employer to do the same.  I don't get a cut or anything,
+but if I/we are costing them money overall, they have less incentive
+to keep giving us code to use.  If we act like the farm team for their
+stuff and occasionally upgrade, they have more incentive to keep
+writing things like the hoptoad_notifier for us to bend to our own
+purposes.
+
 == FEATURES:
 
 * Very simple installation
