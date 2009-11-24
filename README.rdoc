@@ -1,11 +1,11 @@
 = CHEAPTOAD
 
-* Web page upcoming
+* http://noahgibbs.github.com/cheaptoad
 
 == DESCRIPTION:
 
-CheapToad is a simple server plugin for the Hoptoad notifier.  Make your
-app a Hoptoad server in just a couple of lines!
+CheapToad is a simple server plugin for the Hoptoad notifier.  Make an
+app receive and store errors from any app in just a couple of lines!
 
 Hoptoad (hoptoadapp.com) is a commercial application and hosting
 service, run by thoughtbot.  For larger or more important apps, you'll
@@ -13,32 +13,48 @@ want your error logging handled by a reliable, professional service,
 such as thoughtbot and Hoptoad.  For small, simple and experimental
 apps, why pay money?
 
-With CheapToad and Heroku, you can get mostly-reliable remote error
-logging for nothing.  When and if your app grows larger, you can change
-two lines in config/initializers/hoptoad.rb and switch to Hoptoad.
+== WHY CHEAPTOAD?
 
-By the way, I am in no way affiliated with thoughtbot.  This is all
-reverse engineered from the Hoptoad notifier and somebody's RedMine
-plugin for Hoptoad.  Thoughtbot is aware of CheapToad's existence, but
-I'm not an employee or anything.
+With CheapToad and Heroku, you can get mostly-reliable remote error
+logging for nothing.  When and if your app grows larger, you can
+change two lines in config/initializers/hoptoad.rb and switch to
+Hoptoad.
+
+Hoptoad has a far better interface, and is free for the first project
+and first two users (up to a given rate of errors received).  But CheapToad
+could still be the right choice if you:
+
+* have a lot of projects and don't want to spend money
+* don't want to let anybody else store your error data
+* have a lot of people to collaborate with, but not that many errors yet
+* feel bad about making a new Hoptoad account for each of your projects
+  just to scam service for free (this is me)
+* need a lot of control over your old error notices -- if cleaning them up
+  after a while is Not Okay for some reason, for instance
+* don't mind hosting for yourself and/or have a hosting solution you like
+* just like running your own stuff, and like to get your hands dirty (also me)
+
+By the way, I'm not affiliated with thoughtbot.  This is all reverse
+engineered from the Hoptoad notifier and somebody's RedMine plugin for
+Hoptoad.  Thoughtbot is aware of CheapToad's existence, but I'm not an
+employee or anything.
 
 Also, if you like CheapToad for your experimental projects, consider
-upgrading your more professional-looking projects to Hoptoad, or
-getting your employer to do the same.  I don't get a cut or anything,
-but if I/we are costing them money overall, they have less incentive
-to keep giving us code to use.  If we act like the farm team for their
-stuff and occasionally upgrade, they have more incentive to keep
-writing things like the hoptoad_notifier for us to bend to our own
-purposes.
+upgrading a project or two to Hoptoad, or getting your employer to do
+the same.  I don't get a cut, but if I/we are costing them money
+overall then they have less incentive to keep giving us code to use.
+If we act like the farm team for their stuff and occasionally upgrade,
+they have more incentive to keep writing things like the
+hoptoad_notifier for us to bend to our own purposes.
 
 == FEATURES:
 
 * Very simple installation
 * Very simple configuration
-* Keeps your exceptions around to browse later
-* 100% Free
-* Maintains records of old errors forever
-* RSS feed of errors for each project
+* Keeps your error notices around to browse later
+* 100% free for any number of projects
+* Maintains records of old error notices forever
+* RSS feed of error notices for each project
 
 == PROBLEMS:
 
