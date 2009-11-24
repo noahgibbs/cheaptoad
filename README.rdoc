@@ -14,11 +14,8 @@ such as thoughtbot and Hoptoad.  For small, simple and experimental
 apps, why pay money?
 
 With CheapToad and Heroku, you can get mostly-reliable remote error
-logging for nothing.  When/if your app grows larger, you can change
+logging for nothing.  When and if your app grows larger, you can change
 two lines in config/initializers/hoptoad.rb and switch to Hoptoad.
-
-If Hoptoad's motto is "Ride the Toad", ours would be "Too cheap to ride
-the toad?  Take the CheapToad Bus!"
 
 By the way, I am in no way affiliated with thoughtbot.  This is all
 reverse engineered from the Hoptoad notifier and somebody's RedMine
