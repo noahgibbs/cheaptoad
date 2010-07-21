@@ -2,6 +2,27 @@
 
 * http://noahgibbs.github.com/cheaptoad
 
+== INSTALL:
+
+sudo gem install cheaptoad
+
+== USE:
+
+In the app you want to catch hoptoad notices:
+
+* Add "config.gem 'cheaptoad'" to environment.rb.
+* Run "./script generate cheaptoad_migration" in your app
+* Run "rake db:migrate" to create the notices table
+* Start your app, and you're catching notices!
+
+In the app you want to send hoptoad notices:
+
+* Install and configure hoptoad like usual (see hoptoad_notifier)
+* In initializers/hoptoad.rb, add:
+  config.host = 'my-app-hostname.mydomain.com'
+  config.port = 4321   # Whatever your app port is
+* Start your app, and errors will now go to your cheaptoad-ified app
+
 == DESCRIPTION:
 
 CheapToad is a simple server plugin for the Hoptoad notifier.  Make an
@@ -18,7 +39,7 @@ apps, why pay money?
 With CheapToad and Heroku, you can get mostly-reliable remote error
 logging for nothing.  When and if your app grows larger, you can
 change two lines in config/initializers/hoptoad.rb and switch to
-Hoptoad.
+Hoptoad for extra reliability.
 
 Hoptoad has a far better interface, and is free for the first project
 and first two users (up to a given rate of errors received).  But CheapToad
@@ -67,15 +88,13 @@ hoptoad_notifier for us to bend to our own purposes.
 
 == SYNOPSIS:
 
-Make a new Rails app, or choose an existing one.  In
-config/environment.rb, add the line 'config.gem "cheaptoad"'.  You'll
-also need to go into config/routes.rb and add the line "resources
-:notices".  Now that app can receive Hoptoad errors!
+Make a new Rails app, or choose an existing one.  Install the cheaptoad
+plugin, and configure as mentioned above.  Now that app can receive
+Hoptoad errors!
 
-In any and all apps that you want to send errors to your app, create a
-file called config/initializers/hoptoad.rb, as you always would when
-using Hoptoad.  Install the Hoptoad notifier also, of course.  The
-config file will look a bit like this:
+In any and all apps that you want to send errors to your app, you'll
+need to create a file called config/initializers/hoptoad.rb, just as
+you always would when using Hoptoad.  Here's an example config file:
 
 HoptoadNotifier.configure do |config|
   config.api_key = 'My Project Name'
@@ -83,12 +102,12 @@ HoptoadNotifier.configure do |config|
   config.port = 80  # or whatever port number
 
   # All standard Hoptoad filters are supported
-  config.environment_filters << "MY_SECRET_KEY"
+  config.filter_parameters << "MY_SECRET_KEY"
 
 end
 
 Note that the host and port are for the app that will *receive*
-Hoptoad errors.  That's the app you added the 'config.gem "cheaptoad"'
+Hoptoad errors.  That's the app you added 'config.gem "cheaptoad"'
 to.
 
 == REQUIREMENTS:
@@ -115,9 +134,10 @@ We're considering adding the ability to put in your own CSS file
 without changing the HTML, just to make the output less stark.  If you
 care about this feature and would use it, contact me and let me know!
 
-== INSTALL:
+== COMPATIBILITY:
 
-sudo gem install cheaptoad
+CheapToad is compatible with the HopToad protocol v1.  v2 compatibility
+is in the works, and may work as you read this.
 
 == LICENSE:
 
