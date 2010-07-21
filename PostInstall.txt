@@ -1,1 +1,1 @@
-For more information on cheaptoad, see http://cheaptoad.rubyforge.org
+For more information on cheaptoad, see http://github.com/noahgibbs/cheaptoad

@@ -1,3 +1,7 @@
+=== 0.0.6 2010-07-20
+* HopToad protocol v2 support
+* Removed requirement on hoe and newgem
+
 === 0.0.3 2009-09-16
 * Added basic RSS support
 
