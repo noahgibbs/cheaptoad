@@ -1,6 +1,6 @@
 class NoticesController < ApplicationController
   def create
-    notice = Notice.notice_from_yaml(request.raw_post)
+    notice = Notice.from_v1_yaml(request.raw_post)
     notice.save!
 
     render :text => "Successfully received error from hoptoad_notifier!"
