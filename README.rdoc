@@ -139,11 +139,15 @@ care about this feature and would use it, contact me and let me know!
 CheapToad is compatible with the HopToad protocol v1.  v2 compatibility
 is in the works, and may work as you read this.
 
+== CREDITS:
+
+Written by Noah Gibbs, with updates by Silas Baronda
+
 == LICENSE:
 
 (The MIT License)
 
-Copyright (c) 2009 Noah Gibbs
+Copyright (c) 2009-2010 Noah Gibbs
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
