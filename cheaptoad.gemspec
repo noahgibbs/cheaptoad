@@ -19,5 +19,5 @@ Gem::Specification.new do |s|
 
   s.has_rdoc = false
 
-  s.add_dependency('rails', '>= 2.3.2')
+  s.add_dependency('rails', '~> 2.3.2')
 end
