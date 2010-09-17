@@ -14,6 +14,9 @@ History.txt
 init.rb
 install.rb
 lib/cheaptoad.rb
+lib/generators/cheaptoad_migration/cheaptoad_migration_generator.rb
+lib/generators/cheaptoad_migration/templates/migration.rb
+lib/generators/cheaptoad_migration/USAGE
 lib/tasks/cheaptoad.rake
 MIT-LICENSE
 Manifest.txt

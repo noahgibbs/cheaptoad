@@ -10,7 +10,9 @@ sudo gem install cheaptoad
 
 In the app you want to catch hoptoad notices:
 
-* Add "config.gem 'cheaptoad'" to environment.rb.
+* Make your app use the gem:
+  * In Rails 2.3.X: Add "config.gem 'cheaptoad'" to environment.rb.
+  * In Rails 3: Add "gem 'cheaptoad'" to your Gemfile
 * Run "./script generate cheaptoad_migration" in your app
 * Run "rake db:migrate" to create the notices table
 * Start your app, and you're catching notices!
