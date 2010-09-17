@@ -1,4 +1,5 @@
 app/controllers/notices_controller.rb
+app/controllers/notifier_api_controller.rb
 app/models/notice.rb
 app/views/layouts/with_feed.html.erb
 app/views/notices/index.html.erb

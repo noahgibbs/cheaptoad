@@ -1,5 +1,5 @@
 === 0.0.6 2010-07-20
-* HopToad protocol v2 support
+* HopToad protocol v2 support (v1 deprecated)
 * Removed requirement on hoe and newgem
 
 === 0.0.3 2009-09-16

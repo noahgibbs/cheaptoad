@@ -1,11 +1,4 @@
 class NoticesController < ApplicationController
-  def create
-    notice = Notice.from_v1_yaml(request.raw_post)
-    notice.save!
-
-    render :text => "Successfully received error from hoptoad_notifier!"
-  end
-
   def index
     if params[:api_key]
       @api_key = params[:api_key]
